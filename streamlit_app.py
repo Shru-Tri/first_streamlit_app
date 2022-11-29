@@ -7,3 +7,10 @@ streamlit.text('🐔 Hard-Boiled Free-Range Egg')
 streamlit.text('🥑🍞 Avocado Toast')
 
 streamlit.header ('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
+#Adding the csv data from the S3 bucket to be displayed as a dataframe in streamlit library.
+import pandas as pd
+my_fruit_list = pd.read_csv(("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+streamlit.dataframe(my_fruit_list)
+
+
+                            
