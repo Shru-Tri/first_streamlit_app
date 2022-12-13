@@ -23,7 +23,7 @@ def run_query(query):
         return cur.fetchall()
 
 rows = run_query("SELECT * from AUTHOR_INGEST_PARQUET;")
-q1_df = pd.DataFrame(rows.items(), columns =['SHOW_ID', 'TYPE', 'TITLE', 'DIRECTOR', 'CAST', 'COUNTRY', 'DATE_ADDED', 'RELEASE_YEAR', 'RATING', 'DURATION', 'LISTED_IN', 'DESCRIPTION']))
+q1_df = pd.DataFrame(rows.items(), columns =['SHOW_ID', 'TYPE', 'TITLE', 'DIRECTOR', 'CAST', 'COUNTRY', 'DATE_ADDED', 'RELEASE_YEAR', 'RATING', 'DURATION', 'LISTED_IN', 'DESCRIPTION'])
 #st.table(q1_df)
 st.dataframe(q1_df)
 # Print results.
