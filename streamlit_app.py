@@ -25,7 +25,6 @@ def run_query(query):
 rows = run_query("SELECT * from AUTHOR_INGEST_PARQUET;")
 
 # Print results.
-df = pd.DataFrame(rows.style.set_properties(
-        **{"background-color": "lawngreen", "color": "black"}, columns = ['SHOW_ID', 'TYPE', 'TITLE', 'DIRECTOR', 'CAST', 'COUNTRY', 'DATE_ADDED', 'RELEASE_YEAR', 'RATING', 'DURATION', 'LISTED_IN', 'DESCRIPTION'])
+df = pd.DataFrame(rows, columns = ['SHOW_ID', 'TYPE', 'TITLE', 'DIRECTOR', 'CAST', 'COUNTRY', 'DATE_ADDED', 'RELEASE_YEAR', 'RATING', 'DURATION', 'LISTED_IN', 'DESCRIPTION'])
 st.dataframe(df)
 #st.line_chart(df)
