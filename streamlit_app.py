@@ -2,7 +2,7 @@ import streamlit as st
 st.title('My First Visuals App!')
 #Adding the csv data from the S3 bucket to be displayed as a dataframe in streamlit library.
 import pandas as pd
-import matplotlib.pyplot as plt
+import matplotlib as plt
 import numpy as np
 import snowflake.connector
 
