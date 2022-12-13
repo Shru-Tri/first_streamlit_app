@@ -33,5 +33,12 @@ table1_df['DATE_ADDED'] = pd.to_datetime(table1_df['DATE_ADDED'])
 
 st.dataframe(table1_df)
 
+# This function returns the earliest date present in the dataset
+def get_min_date():
+    return min(table1_df.DATE_ADDED()
+
+# This function returns the latest date present in the dataset
+def get_max_date():
+    return max(table1_df.DATE_ADDED()
 ##################################
 st.bar_chart(table1_df, x = 'SHOW_ID', y='COUNTRY')
