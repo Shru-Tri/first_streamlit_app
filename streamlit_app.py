@@ -41,20 +41,5 @@ def get_min_date():
 def get_max_date():
     return max(table1_df.DATE_ADDED())
                       
-# This function creates the app with title, min and max slider
-def app_creation():
-    st.title('TIMELINE OF NETFLIX SHOWS/MOVIES')
-    min_filter = st.slider('Select Min date',
-                           min_value=get_min_date(),
-                           max_value=get_max_date(),
-                           value=get_min_date()
-                           )
-    max_filter = st.slider('Select Max date',
-                           min_value=get_min_date(),
-                           max_value=get_max_date(),
-                           value=get_max_date()
-                           )    
-               
- app_creation()     
 ##################################
-#st.bar_chart(table1_df, x = 'SHOW_ID', y='COUNTRY')
+st.line_chart(table1_df, x = 'DATE_ADDED', y='TYPE')
