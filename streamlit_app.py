@@ -1,5 +1,5 @@
 import streamlit as st
-st.title('My First Visuals App')
+st.title('My First Visuals App!')
 #Adding the csv data from the S3 bucket to be displayed as a dataframe in streamlit library.
 import pandas as pd
 import snowflake.connector
@@ -23,7 +23,7 @@ def run_query(query):
         return cur.fetchall()
 
 rows = run_query("SELECT * from AUTHOR_INGEST_PARQUET;")
-
+q1_df = pd.DataFrame(rows)
 # Print results.
-for row in rows:
-    st.write(f"{row[0]} has a :{row[1]}:")
+#for row in rows:
+# st.write(f"{row[0]} has a :{row[1]}:")
