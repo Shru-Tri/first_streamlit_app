@@ -35,12 +35,4 @@ type_count = table1_df['type'].value_counts().to_dict()
 
 type_count
 
-p1 = plt.bar(range(len(type_count)), list(type_count.values()))
-size = len(table1_df)
-for rect1 in p1:
-    height = rect1.get_height()
-    plt.annotate( "{}%".format(round((height*100/size),3)),(rect1.get_x() + rect1.get_width()/2, height+.05),ha="center",va="bottom",fontsize=15)
-
-plt.xticks(range(len(type_count)), list(type_count.keys()))
-plt.title('Movies vs TV Show')
-plt.show()
+p1 = st.bar_chart(range(len(type_count)), list(type_count.values()))
