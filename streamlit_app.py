@@ -55,6 +55,6 @@ def app_creation():
                            value=get_max_date()
                            )    
                
-  app_creation()     
+ app_creation()     
 ##################################
 #st.bar_chart(table1_df, x = 'SHOW_ID', y='COUNTRY')
