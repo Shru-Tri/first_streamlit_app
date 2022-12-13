@@ -27,4 +27,4 @@ rows = run_query("SELECT * from AUTHOR_INGEST_PARQUET;")
 # Print results.
 df = pd.DataFrame(rows, columns = ['SHOW_ID', 'TYPE', 'TITLE', 'DIRECTOR', 'CAST', 'COUNTRY', 'DATE_ADDED', 'RELEASE_YEAR', 'RATING', 'DURATION', 'LISTED_IN', 'DESCRIPTION'])
 table1_df = st.dataframe(df)
-table1_df.dropna()
+#table1_df.dropna()
