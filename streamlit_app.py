@@ -31,8 +31,4 @@ df = pd.DataFrame(rows, columns = ['SHOW_ID', 'TYPE', 'TITLE', 'DIRECTOR', 'CAST
 table1_df = df.dropna() 
 st.dataframe(table1_df)
 ##################################
-type_count = table1_df['type'].value_counts().to_dict()
-
-type_count
-
-p1 = st.bar_chart(range(len(type_count)), list(type_count.values()))
+st.line_chart(table1_df)
