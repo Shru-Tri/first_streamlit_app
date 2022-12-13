@@ -19,7 +19,6 @@ conn = init_connection()
 @st.experimental_memo(ttl=600)
 # SQL query
 query = "SELECT * from AUTHOR_INGEST_PARQUET;"
-    """
 # Perform query.
 # Creating a function to load the data into a pandas data frame
 def load_data():
