@@ -42,4 +42,4 @@ def get_max_date():
     return max(table1_df.DATE_ADDED())
                       
 ##################################
-st.altair_chart(table1_df, y = 'DATE_ADDED', x='TYPE')
+st.line_chart(table1_df, y = 'DATE_ADDED', x='TYPE')
