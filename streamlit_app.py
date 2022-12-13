@@ -19,7 +19,11 @@ conn = init_connection()
 
 # SQL query
 
-query = "SELECT * FROM AUTHOR_INGEST_PARQUET;"
+query = """
+    SELECT 
+        *
+    FROM AUTHOR_INGEST_PARQUET;
+    """
 
 # Perform query.
 # Creating a function to load the data into a pandas data frame
