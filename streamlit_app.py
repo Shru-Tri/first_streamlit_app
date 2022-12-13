@@ -21,7 +21,7 @@ conn = init_connection()
 
 query = """
     SELECT 
-        *
+        TYPE
     FROM AUTHOR_INGEST_PARQUET;
     """
 
