@@ -14,13 +14,14 @@ def init_connection():
 
 conn = init_connection()
 
-
 # Uses st.experimental_memo to only rerun when the query changes or after 10 min.
 @st.experimental_memo(ttl=600)
+
 # SQL query
+
 query = """
-SELECT * from AUTHOR_INGEST_PARQUET;
-"""
+        SELECT * FROM AUTHOR_INGEST_PARQUET;
+        """
 
 # Perform query.
 # Creating a function to load the data into a pandas data frame
