@@ -42,4 +42,4 @@ def get_max_date():
     return max(table1_df.DATE_ADDED())
                       
 ##################################
-st.line_chart(table1_df, x = 'DATE_ADDED', y='TYPE')
+st.bar_chart(table1_df, x = 'DATE_ADDED', y='TYPE')
