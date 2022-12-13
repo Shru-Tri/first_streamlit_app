@@ -24,6 +24,8 @@ def run_query(query):
 
 rows = run_query("SELECT * from AUTHOR_INGEST_PARQUET;")
 q1_df = pd.DataFrame(rows)
+
+st.dataframe(q1_df)
 # Print results.
 #for row in rows:
 # st.write(f"{row[0]} has a :{row[1]}:")
