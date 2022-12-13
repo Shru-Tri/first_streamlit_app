@@ -14,21 +14,24 @@ def init_connection():
 
 conn = init_connection()
 
-# Perform query.
+
 # Uses st.experimental_memo to only rerun when the query changes or after 10 min.
 @st.experimental_memo(ttl=600)
-def run_query(query):
-    with conn.cursor() as cur:
-        cur.execute(query)
-        return cur.fetchall()
+# SQL query
+query = "SELECT * from AUTHOR_INGEST_PARQUET;"
+    """
+# Perform query.
+# Creating a function to load the data into a pandas data frame
+def load_data():
+    cur = conn.cursor().execute(query)
+    table1_df = pd.DataFrame.from_records(iter(cur), 
+                  columns=[x[0] for x in cur.description])
+    return payments_df
 
-rows = run_query("SELECT * from AUTHOR_INGEST_PARQUET;")
-#q1_df = pd.DataFrame(rows)
-q1_df = pd.DataFrame.from_records(iter(rows), 
-                  columns=[x[0] for x in rows.description])
+
 #q1_df = pd.DataFrame(rows.items(), columns =['SHOW_ID', 'TYPE', 'TITLE', 'DIRECTOR', 'CAST', 'COUNTRY', 'DATE_ADDED', 'RELEASE_YEAR', 'RATING', 'DURATION', 'LISTED_IN', 'DESCRIPTION'])
 #st.table(q1_df)
-st.dataframe(q1_df)
+#st.dataframe(q1_df)
 # Print results.
 #for row in rows:
 # st.write(f"{row[0]} has a :{row[1]}:")
