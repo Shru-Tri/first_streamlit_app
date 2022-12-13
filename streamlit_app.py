@@ -26,3 +26,4 @@ rows = run_query("SELECT * from AUTHOR_INGEST_PARQUET;")
 
 # Print results.
 df = pd.DataFrame(rows)
+st.dataframe(df)
