@@ -25,3 +25,5 @@ def run_query(query):
 rows = run_query("SELECT * from AUTHOR_INGEST_PARQUET;")
 
 # Print results.
+for row in rows:
+    return st.dataframe(row[:])
