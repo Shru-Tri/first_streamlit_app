@@ -17,5 +17,4 @@ conn = init_connection()
 # Uses st.experimental_memo to only rerun when the query changes or after 10 min.
 @st.experimental_memo(ttl=600)
 
-# SQL query
 
