@@ -31,4 +31,4 @@ df = pd.DataFrame(rows, columns = ['SHOW_ID', 'TYPE', 'TITLE', 'DIRECTOR', 'CAST
 table1_df = df.dropna() 
 st.dataframe(table1_df)
 ##################################
-st.line_chart(table1_df, x = 'COUNTRY', y='RATING')
+st.bar_chart(table1_df, x = 'COUNTRY', y='RATING')
